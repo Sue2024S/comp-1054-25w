@@ -11,18 +11,27 @@
 			font: 1200%/1.2 Impact, sans-serif;
 			text-align: center;
 			/* STEP 1: Apply the gradient that you generated on the previous page as the background for the <h1> element, or use the photo of a sunset in the img/ directory */
-
+			background: linear-gradient();
 			/* STEP 2: Set the text color to transparent (dangerous) */
-
-			/* STEP 3: Set the background-clip (and -webkit-background-clip) property to text */
-
+			color: transparent;
+			/* STEP 3: Set the background-clip (and -webkit-background-clip) property to text /the reason to use this is*/  
+			-webkit-background-clip: text; 
+			background-clip: text;
 			/* STEP 4: Apply another non-standard visual effect -webkit-text-stroke-color (and width) */
 
 		}
 		/* "Florida gulf coast" By Mmacbeth - Own work, CC0, https://commons.wikimedia.org/w/index.php?curid=39319981 */
+		h2 {
+			color:white;
+			font-size: 500%;
+			text-align: center;
+			-webkit-text-stroke: 10px red;
+			paint-order: stroke fill;
+		}
 	</style>
 </head>
 <body>
 	<h1>Text Clipping</h1>
+	<h2>Text stroke</h2>
 </body>
 </html>
