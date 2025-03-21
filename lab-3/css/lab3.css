@@ -24,23 +24,27 @@ html {
 
 ul {
 	display: flex;
-	gap: 1px;
+	gap: 2px;
 	list-style: none;
+	padding: 0;
+    margin: 0;
 }
 
 li {
 	padding: 10px 20px;
 	cursor: pointer;
-	background-color: grey;
+	background-color: lightgrey;
 	font-weight: bold;
 	color: black;
-	border: 1px solid black;
 	border-radius: 5px 5px 0 0;
+	border-bottom: none;
 }
 
 li:hover {
 	background-color: white;
 	color: black;
+	border: 1px solid black;
+	border-bottom: none;
 }
 
 .tabs a {
@@ -54,13 +58,26 @@ li:hover {
 [role="tabpanel"] {
 	display: none;
 	padding: 15px;
-} 
-
-[role="tabpanel"]:active {
-    display: block;
+	background-color: white;
+	border: 1px solid black;
 }
+
+/* .tabpanel {
+	background-color: white;
+	border: 2px solid black;
+	padding: 15px;
+} */
+
+/* [role="tabpanel"]:active {
+    display: block;
+} */
 
 .tabpanel:target {
     display: block;
 }
 
+.tabs input:nth-of-type(1):checked ~ .tabpanel:nth-of-type(1),
+.tabs input:nth-of-type(2):checked ~ .tabpanel:nth-of-type(2),
+.tabs input:nth-of-type(3):checked ~ .tabpanel:nth-of-type(3) {
+    display: block;
+}
