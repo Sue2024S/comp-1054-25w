@@ -17,15 +17,15 @@ html {
 	margin: 0 auto;
 }
 
-.tabs {
+#tabpanel1, #tabpanel2, #tabpanel3 {
 	border: 1px solid grey;
+	padding-top: -80px;
 }
 
 ul {
 	display: flex;
 	gap: 1px;
 	list-style: none;
-	border-bottom: 2px solid grey;
 }
 
 li {
@@ -35,6 +35,7 @@ li {
 	font-weight: bold;
 	color: black;
 	border: 1px solid black;
+	border-radius: 5px 5px 0 0;
 }
 
 li:hover {
@@ -52,8 +53,14 @@ li:hover {
 /* source https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role*/
 [role="tabpanel"] {
 	display: none;
-}
+	padding: 15px;
+} 
 
 [role="tabpanel"]:active {
     display: block;
 }
+
+.tabpanel:target {
+    display: block;
+}
+
