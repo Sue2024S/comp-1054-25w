@@ -47,6 +47,13 @@ li:hover {
 	border-bottom: none;
 }
 
+li:active {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+	border-bottom: none;
+}
+
 .tabs a {
     text-decoration: none;
     font-weight: bold;
@@ -60,6 +67,7 @@ li:hover {
 	padding: 15px;
 	background-color: white;
 	border: 1px solid black;
+	border-top: none;
 }
 
 /* .tabpanel {
@@ -68,16 +76,8 @@ li:hover {
 	padding: 15px;
 } */
 
-/* [role="tabpanel"]:active {
-    display: block;
-} */
-
-.tabpanel:target {
+[role="tabpanel"]:active a {
     display: block;
 }
 
-.tabs input:nth-of-type(1):checked ~ .tabpanel:nth-of-type(1),
-.tabs input:nth-of-type(2):checked ~ .tabpanel:nth-of-type(2),
-.tabs input:nth-of-type(3):checked ~ .tabpanel:nth-of-type(3) {
-    display: block;
-}
+
