@@ -1,32 +1,34 @@
-// const tabs = document.querySelectorrAll(`[role="tab"]`);
-
-// tabs.forEach((tab) => {
-// 	tab.addEventListener("click", (event) => {
-// 		event.preventDefault();
-
-// 		panels.forEach((panel) => panel.style.display = "none");
-
-// 		tabs.forEach((tab) => tab.classList.remove("active"));
-
-// 		const targetPanelId = tab.querySelector("a").getAttribute("href");
-// 		document.querySelector(targetPanelId).style.display = "block";
-
-// 		tab.classList.add("active");
-// 	});
-// });
-
-// tabs[0].classList.add("active");
-// document.querySelector(`[role="tabpanel"]`).style.display = "block";
-
-
-
 const tabs = document.querySelectorAll(`[role="tab"]`);
+console.log(tabs);
 
+tabs.forEach((tab) => {
+	tab.addEventListener("click", (event) => {
+        const targetPanelId = tab.querySelector("a").getAttribute("href");
+        event.preventDefault();
+        if (document.querySelector(`[id="tabpanel1"]`).style.display == "block") {
+					tab.classList.remove("active");
+                    document.querySelector(`[id="tabpanel1"]`).style.display = "none";
+                    console.log("tab1");
+ 
+				};
+        if (document.querySelector(`[id="tabpanel2"]`).style.display == "block") {
+					tab.classList.remove("active");
+                    document.querySelector(`[id="tabpanel2"]`).style.display = "none";
+                    console.log("tab2");
+ 
+				};
+                
+        if (document.querySelector(`[id="tabpanel3"]`).style.display == "block") {
+					tab.classList.remove("active");
+                    document.querySelector(`[id="tabpanel3"]`).style.display = "none";
+                    console.log("tab3");
+ 
+				};
 
-
-
-
-
-var tabpanel1 = document.querySelector("#tabpanel1");
-var tabpanel2 = document.querySelector("#tabpanel2");
-var tabpanel3 = document.querySelector("#tabpanel3");
+	
+        document.querySelector(targetPanelId).style.display = "block";
+        tab.classList.add("active");    
+	});
+    
+    
+});
