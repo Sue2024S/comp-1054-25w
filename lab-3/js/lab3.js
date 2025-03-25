@@ -1,6 +1,8 @@
+//select all the elements of the list 
 const tabs = document.querySelectorAll(`[role="tab"]`);
 console.log(tabs);
 
+//// Loop through each tab and add an event listener for the "click" event
 tabs.forEach((tab) => {
 	tab.addEventListener("click", (event) => {
         const targetPanelId = tab.querySelector("a").getAttribute("href");
@@ -25,8 +27,8 @@ tabs.forEach((tab) => {
  
 				};
 
-	
         document.querySelector(targetPanelId).style.display = "block";
+        // Add the "active" class to the clicked tab
         tab.classList.add("active");    
 	});
     
